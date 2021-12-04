@@ -26,20 +26,20 @@ public class UserRestController {
         return ObjectMapperUtils.mapAll(userService.findAllUser(), UserDTO.class);
     }
 
-    @GetMapping(value = "/byUserId/{user_name}")
-    public UserDTO getUserByName(@PathVariable("user_name") String user_name) {
-        return ObjectMapperUtils.map(userService.findByUser_Name(user_name), UserDTO.class);
+    @GetMapping(value = "/byUserId/{userName}")
+    public UserDTO getUserByName(@PathVariable("userName") String userName) {
+        return ObjectMapperUtils.map(userService.findByUsername(userName), UserDTO.class);
     }
 
-    @GetMapping(value = "/byUserIdAndPassword/{user_name}/{password}")
-    public UserDTO getUserByIdAndPassword(@PathVariable("user_name") String user_name, @PathVariable("password") String password) {
-        return ObjectMapperUtils.map(userService.findByUser_NameAndPassword(user_name, password), UserDTO.class);
+    @GetMapping(value = "/byUserIdAndPassword/{userName}/{password}")
+    public UserDTO getUserByIdAndPassword(@PathVariable("userName") String userName, @PathVariable("password") String password) {
+        return ObjectMapperUtils.map(userService.findByUsernameAndPassword(userName, password), UserDTO.class);
     }
 
     @PostMapping(value = "/save")
     public ResponseEntity<?> saveNewUser(@RequestBody UserDTO userDTO) {
         UserRestController controller = new UserRestController();
-        if (controller.getUserByName(userDTO.getUser_name()) != null) {
+        if (controller.getUserByName(userDTO.getUserName()) != null) {
             return new ResponseEntity("User already existed!", HttpStatus.OK);
         } else {
             userService.saveOrUpdateUser(ObjectMapperUtils.map(userDTO, User.class));

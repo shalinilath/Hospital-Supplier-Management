@@ -11,9 +11,9 @@ import java.util.List;
 
 public interface UserRepository extends MongoRepository<User, String> {
 
-    User findByUser_NameAndPassword(String user_name, String password); // for log in
+    User findByUsernameAndPassword(String userName, String password); // for log in
 
-    User findByUser_Name(String user_name); //for sign up
+    User findByUsername(String userName); //for sign up
 
     List<User> findAllUser();
 
