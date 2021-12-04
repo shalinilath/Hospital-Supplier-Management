@@ -11,35 +11,19 @@ import java.util.List;
 public class Vendor {
     @Id
     private String id;
-    private String vendor_id;
-    private String vendor_name;
+    private String vendorId;
+    private String vendorName;
     private String url;
-    private String contact_firstname;
-    private String contact_lastname;
-    private String contact_number;
-    private String contact_title;
+    private String contactFirstName;
+    private String contactLastname;
+    private String contactNumber;
+    private String contactTitle;
     private String email;
     private String address;
-    private String service_type;
+    private String serviceType;
     private List<Product> products;
 
     public Vendor() {}
-
-    public Vendor(String vendor_id, String vendor_name, String url, String contact_firstname, String contact_lastname,
-                  String contact_number, String contact_title, String email, String address, String service_type,
-                  List<Product> products) {
-        this.vendor_id = vendor_id;
-        this.vendor_name = vendor_name;
-        this.url = url;
-        this.contact_firstname = contact_firstname;
-        this.contact_lastname = contact_lastname;
-        this.contact_number = contact_number;
-        this.contact_title = contact_title;
-        this.email = email;
-        this.address = address;
-        this.service_type = service_type;
-        this.products = products;
-    }
 
 
     public String getId() {
@@ -50,20 +34,20 @@ public class Vendor {
         this.id = id;
     }
 
-    public String getVendor_id() {
-        return vendor_id;
+    public String getVendorId() {
+        return vendorId;
     }
 
-    public void setVendor_id(String vendor_id) {
-        this.vendor_id = vendor_id;
+    public void setVendorId(String vendorId) {
+        this.vendorId = vendorId;
     }
 
-    public String getVendor_name() {
-        return vendor_name;
+    public String getVendorName() {
+        return vendorName;
     }
 
-    public void setVendor_name(String vendor_name) {
-        this.vendor_name = vendor_name;
+    public void setVendorName(String vendorName) {
+        this.vendorName = vendorName;
     }
 
     public String getUrl() {
@@ -74,36 +58,36 @@ public class Vendor {
         this.url = url;
     }
 
-    public String getContact_firstname() {
-        return contact_firstname;
+    public String getContactFirstName() {
+        return contactFirstName;
     }
 
-    public void setContact_firstname(String contact_firstname) {
-        this.contact_firstname = contact_firstname;
+    public void setContactFirstName(String contactFirstName) {
+        this.contactFirstName = contactFirstName;
     }
 
-    public String getContact_lastname() {
-        return contact_lastname;
+    public String getContactLastname() {
+        return contactLastname;
     }
 
-    public void setContact_lastname(String contact_lastname) {
-        this.contact_lastname = contact_lastname;
+    public void setContactLastname(String contactLastname) {
+        this.contactLastname = contactLastname;
     }
 
-    public String getContact_number() {
-        return contact_number;
+    public String getContactNumber() {
+        return contactNumber;
     }
 
-    public void setContact_number(String contact_number) {
-        this.contact_number = contact_number;
+    public void setContactNumber(String contactNumber) {
+        this.contactNumber = contactNumber;
     }
 
-    public String getContact_title() {
-        return contact_title;
+    public String getContactTitle() {
+        return contactTitle;
     }
 
-    public void setContact_title(String contact_title) {
-        this.contact_title = contact_title;
+    public void setContactTitle(String contactTitle) {
+        this.contactTitle = contactTitle;
     }
 
     public String getEmail() {
@@ -122,12 +106,12 @@ public class Vendor {
         this.address = address;
     }
 
-    public String getService_type() {
-        return service_type;
+    public String getServiceType() {
+        return serviceType;
     }
 
-    public void setService_type(String service_type) {
-        this.service_type = service_type;
+    public void setServiceType(String serviceType) {
+        this.serviceType = serviceType;
     }
 
     public List<Product> getProducts() {
@@ -142,16 +126,16 @@ public class Vendor {
     public String toString() {
         return "Vendor{" +
                 "id='" + id + '\'' +
-                ", vendor_id='" + vendor_id + '\'' +
-                ", vendor_name='" + vendor_name + '\'' +
+                ", vendorId='" + vendorId + '\'' +
+                ", vendorName='" + vendorName + '\'' +
                 ", url='" + url + '\'' +
-                ", contact_firstname='" + contact_firstname + '\'' +
-                ", contact_lastname='" + contact_lastname + '\'' +
-                ", contact_number='" + contact_number + '\'' +
-                ", contact_title='" + contact_title + '\'' +
+                ", contactFirstName='" + contactFirstName + '\'' +
+                ", contactLastname='" + contactLastname + '\'' +
+                ", contactNumber='" + contactNumber + '\'' +
+                ", contactTitle='" + contactTitle + '\'' +
                 ", email='" + email + '\'' +
                 ", address='" + address + '\'' +
-                ", service_type='" + service_type + '\'' +
+                ", serviceType='" + serviceType + '\'' +
                 ", products=" + products +
                 '}';
     }

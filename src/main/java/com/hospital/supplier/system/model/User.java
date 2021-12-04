@@ -12,58 +12,33 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class User {
     @Id
     private String id;
-    private String user_id;
-
-    public String getUser_name() {
-        return user_name;
-    }
-
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
-    }
-
-    private String user_name;
-    private String first_name;
-    private String last_name;
+    private String userId;
+    private String userName;
+    private String firstName;
+    private String lastName;
     private String password;
     private String gender;
     private String address;
     private String designation;
-    private String phone_number;
+    private String phoneNumber;
 
     public User() {
 
     }
 
-    public User(String user_id, String user_name, String first_name, String last_name, String password, String gender,
-                String address, String designation, String phone_number) {
-        this.user_id = user_id;
-        this.user_name = user_name;
-        this.first_name = first_name;
-        this.last_name = last_name;
+    public User(String id, String userId, String userName, String firstName, String lastName, String password, String gender, String address, String designation, String phoneNumber) {
+        this.id = id;
+        this.userId = userId;
+        this.userName = userName;
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.password = password;
         this.gender = gender;
         this.address = address;
         this.designation = designation;
-        this.phone_number = phone_number;
+        this.phoneNumber = phoneNumber;
     }
 
-
-
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id='" + user_id + '\'' +
-                ", firstName='" + first_name + '\'' +
-                ", lastName=" + last_name +
-                ", sex='" + gender + '\'' +
-                ", address=" + address + '\'' +
-                ", password=" + password + '\'' +
-                ", designation=" + designation + '\'' +
-                ", contact number=" + phone_number +
-                '}';
-    }
 
     public String getId() {
         return id;
@@ -73,28 +48,36 @@ public class User {
         this.id = id;
     }
 
-    public String getUser_id() {
-        return user_id;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUser_id(String user_id) {
-        this.user_id = user_id;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getPassword() {
@@ -129,11 +112,27 @@ public class User {
         this.designation = designation;
     }
 
-    public String getPhone_number() {
-        return phone_number;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id='" + id + '\'' +
+                ", userId='" + userId + '\'' +
+                ", userName='" + userName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", password='" + password + '\'' +
+                ", gender='" + gender + '\'' +
+                ", address='" + address + '\'' +
+                ", designation='" + designation + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
     }
 }

@@ -11,9 +11,9 @@ import java.util.List;
 public interface UserService {
     List<User> findAllUser();
 
-    User findByUser_Name(String user_name);
+    User findByUsername(String userName);
 
-    User findByUser_NameAndPassword(String user_name, String password);
+    User findByUsernameAndPassword(String userName, String password);
 
     User saveOrUpdateUser(User user);
 

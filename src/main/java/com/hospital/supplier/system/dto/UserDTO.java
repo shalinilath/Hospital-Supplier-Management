@@ -1,44 +1,29 @@
 package com.hospital.supplier.system.dto;
 
+import org.springframework.data.mongodb.core.mapping.Field;
+
 /**
  * @author Joe
  */
 
 public class UserDTO {
     private String id;
-    private String user_id;
-
-    public String getUser_name() {
-        return user_name;
-    }
-
-    public void setUser_name(String user_name) {
-        this.user_name = user_name;
-    }
-
-    private String user_name;
-    private String first_name;
-    private String last_name;
+    @Field("user_id")
+    private String userId;
+    @Field("user_name")
+    private String userName;
+    @Field("first_name")
+    private String firstName;
+    @Field("last_name")
+    private String lastName;
     private String gender;
     private String address;
     private String designation;
-    private String phone_number;
+    @Field("phone_number")
+    private String phoneNumber;
 
     public UserDTO() {}
 
-
-    public UserDTO(String id, String user_id, String user_name, String first_name, String last_name, String gender,
-                   String address, String designation, String phone_number) {
-        this.id = id;
-        this.user_id = user_id;
-        this.user_name = user_name;
-        this.first_name = first_name;
-        this.last_name = last_name;
-        this.gender = gender;
-        this.address = address;
-        this.designation = designation;
-        this.phone_number = phone_number;
-    }
 
     public String getId() {
         return id;
@@ -48,28 +33,36 @@ public class UserDTO {
         this.id = id;
     }
 
-    public String getUser_id() {
-        return user_id;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setUser_id(String user_id) {
-        this.user_id = user_id;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
-    public String getFirst_name() {
-        return first_name;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setFirst_name(String first_name) {
-        this.first_name = first_name;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public String getLast_name() {
-        return last_name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setLast_name(String last_name) {
-        this.last_name = last_name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getGender() {
@@ -96,11 +89,26 @@ public class UserDTO {
         this.designation = designation;
     }
 
-    public String getPhone_number() {
-        return phone_number;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "UserDTO{" +
+                "id='" + id + '\'' +
+                ", userId='" + userId + '\'' +
+                ", userName='" + userName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", gender='" + gender + '\'' +
+                ", address='" + address + '\'' +
+                ", designation='" + designation + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
     }
 }
