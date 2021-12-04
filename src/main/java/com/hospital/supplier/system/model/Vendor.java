@@ -2,6 +2,8 @@ package com.hospital.supplier.system.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
+
 import java.util.List;
 
 /**
@@ -11,15 +13,22 @@ import java.util.List;
 public class Vendor {
     @Id
     private String id;
+    @Field("vendor_id")
     private String vendorId;
+    @Field("vendor_name")
     private String vendorName;
     private String url;
+    @Field("contact_firstname")
     private String contactFirstName;
+    @Field("contact_lastname")
     private String contactLastname;
+    @Field("contact_number")
     private String contactNumber;
+    @Field("contact_title")
     private String contactTitle;
     private String email;
     private String address;
+    @Field("service_type")
     private String serviceType;
     private List<Product> products;
 

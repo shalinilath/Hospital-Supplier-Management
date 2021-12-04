@@ -18,8 +18,13 @@ import java.util.List;
 @RequestMapping("/users")
 public class UserRestController {
 
+
     @Autowired
     private UserService userService;
+
+    public UserRestController() {
+
+    }
 
     @GetMapping(value = "/")
     public List<UserDTO> getAllUsers() {
@@ -28,6 +33,9 @@ public class UserRestController {
 
     @GetMapping(value = "/byUserId/{userName}")
     public UserDTO getUserByName(@PathVariable("userName") String userName) {
+        if (userService.findByUsername(userName) == null) {
+            return null;
+        }
         return ObjectMapperUtils.map(userService.findByUsername(userName), UserDTO.class);
     }
 
@@ -38,13 +46,11 @@ public class UserRestController {
 
     @PostMapping(value = "/save")
     public ResponseEntity<?> saveNewUser(@RequestBody UserDTO userDTO) {
-        UserRestController controller = new UserRestController();
-        if (controller.getUserByName(userDTO.getUserName()) != null) {
-            return new ResponseEntity("User already existed!", HttpStatus.OK);
-        } else {
-            userService.saveOrUpdateUser(ObjectMapperUtils.map(userDTO, User.class));
-            return new ResponseEntity("User added successfully", HttpStatus.OK);
-        }
+            if (this.getUserByName(userDTO.getUserName()) != null) {
+                return new ResponseEntity("User already existed!", HttpStatus.OK);
+            } else {
+                userService.saveOrUpdateUser(ObjectMapperUtils.map(userDTO, User.class));
+                return new ResponseEntity("User added successfully", HttpStatus.OK);
+            }
     }
-
 }
