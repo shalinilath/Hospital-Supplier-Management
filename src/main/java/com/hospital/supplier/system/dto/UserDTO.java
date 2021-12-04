@@ -16,6 +16,7 @@ public class UserDTO {
     private String firstName;
     @Field("last_name")
     private String lastName;
+    private String password;
     private String gender;
     private String address;
     private String designation;
@@ -24,6 +25,13 @@ public class UserDTO {
 
     public UserDTO() {}
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public String getId() {
         return id;

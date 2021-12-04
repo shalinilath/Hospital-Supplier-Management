@@ -17,7 +17,7 @@ public interface VendorRepository extends MongoRepository<Vendor, String> {
 
     List<Vendor> findAll();
 
-    Product purchaseProduct(String vendorId, String productId, int number);
+//    Product purchaseProduct(String vendorId, String productId, int number);
 
 
 }

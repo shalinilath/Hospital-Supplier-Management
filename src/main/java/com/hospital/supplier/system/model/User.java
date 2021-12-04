@@ -2,7 +2,7 @@ package com.hospital.supplier.system.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
+import org.springframework.data.mongodb.core.mapping.Field;
 
 
 /**
@@ -12,14 +12,19 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class User {
     @Id
     private String id;
+    @Field("user_id")
     private String userId;
+    @Field("user_name")
     private String userName;
+    @Field("first_name")
     private String firstName;
+    @Field("last_name")
     private String lastName;
     private String password;
     private String gender;
     private String address;
     private String designation;
+    @Field("phone_number")
     private String phoneNumber;
 
     public User() {

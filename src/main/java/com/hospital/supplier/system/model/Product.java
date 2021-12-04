@@ -1,6 +1,7 @@
 package com.hospital.supplier.system.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.math.BigDecimal;
 
@@ -8,10 +9,15 @@ import java.math.BigDecimal;
 public class Product {
     @Id
     private String id;
+    @Field("product_id")
     private String productId;
+    @Field("product_name")
     private String productName;
+    @Field("units_available")
     private int unitsAvailable;
+    @Field("units_required")
     private int unitsRequired;
+    @Field("unit_price")
     private BigDecimal unitPrice;
 
     public Product() {}
