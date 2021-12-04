@@ -42,7 +42,7 @@ public class VendorServiceImpl implements VendorService {
     @Override
     public Product purchaseProduct(String vendorId, String productId, int number) {
         Vendor vendor = vendorRepository.findByVendorId(vendorId);
-        Product product = vendor.getProducts().stream().filter(product1 -> productId.equals(product1.getProductId()))
+        Product product = vendor.getProducts().stream().filter(product1 -> productId.equals(product1.getId()))
                 .findAny().orElse(null);
         if (product != null) {
             for (int i = 0; i < number; i++) {

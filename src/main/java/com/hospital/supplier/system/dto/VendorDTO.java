@@ -12,29 +12,37 @@ import java.util.List;
 
 public class VendorDTO {
     private String id;
-    private String companyName;
+    private String vendor_id;
+    private String vendor_name;
+    private String url;
+    private String contact_firstname;
+    private String contact_lastname;
+    private String contact_number;
+    private String contact_title;
+    private String email;
     private String address;
-    private String contactFName;
-    private String contactLName;
-    private long phoneNumber;
-    private String serviceType;
+    private String service_type;
     private List<Product> products;
 
     public VendorDTO() {}
 
-    public VendorDTO(String id, String companyName, String address, String contactFName, String contactLName, long phoneNumber,
-                     String serviceType, List<Product> products) {
+
+    public VendorDTO(String id, String vendor_id, String vendor_name, String url, String contact_firstname,
+                     String contact_lastname, String contact_number, String contact_title, String email, String address,
+                     String service_type, List<Product> products) {
         this.id = id;
-        this.companyName = companyName;
+        this.vendor_id = vendor_id;
+        this.vendor_name = vendor_name;
+        this.url = url;
+        this.contact_firstname = contact_firstname;
+        this.contact_lastname = contact_lastname;
+        this.contact_number = contact_number;
+        this.contact_title = contact_title;
+        this.email = email;
         this.address = address;
-        this.contactFName = contactFName;
-        this.contactLName = contactLName;
-        this.phoneNumber = phoneNumber;
-        this.serviceType = serviceType;
+        this.service_type = service_type;
         this.products = products;
-
     }
-
 
     public String getId() {
         return id;
@@ -44,12 +52,68 @@ public class VendorDTO {
         this.id = id;
     }
 
-    public String getCompanyName() {
-        return companyName;
+    public String getVendor_id() {
+        return vendor_id;
     }
 
-    public void setCompanyName(String companyName) {
-        this.companyName = companyName;
+    public void setVendor_id(String vendor_id) {
+        this.vendor_id = vendor_id;
+    }
+
+    public String getVendor_name() {
+        return vendor_name;
+    }
+
+    public void setVendor_name(String vendor_name) {
+        this.vendor_name = vendor_name;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getContact_firstname() {
+        return contact_firstname;
+    }
+
+    public void setContact_firstname(String contact_firstname) {
+        this.contact_firstname = contact_firstname;
+    }
+
+    public String getContact_lastname() {
+        return contact_lastname;
+    }
+
+    public void setContact_lastname(String contact_lastname) {
+        this.contact_lastname = contact_lastname;
+    }
+
+    public String getContact_number() {
+        return contact_number;
+    }
+
+    public void setContact_number(String contact_number) {
+        this.contact_number = contact_number;
+    }
+
+    public String getContact_title() {
+        return contact_title;
+    }
+
+    public void setContact_title(String contact_title) {
+        this.contact_title = contact_title;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getAddress() {
@@ -60,36 +124,12 @@ public class VendorDTO {
         this.address = address;
     }
 
-    public String getContactFName() {
-        return contactFName;
+    public String getService_type() {
+        return service_type;
     }
 
-    public void setContactFName(String contactFName) {
-        this.contactFName = contactFName;
-    }
-
-    public String getContactLName() {
-        return contactLName;
-    }
-
-    public void setContactLName(String contactLName) {
-        this.contactLName = contactLName;
-    }
-
-    public long getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(long phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public String getServiceType() {
-        return serviceType;
-    }
-
-    public void setServiceType(String serviceType) {
-        this.serviceType = serviceType;
+    public void setService_type(String service_type) {
+        this.service_type = service_type;
     }
 
     public List<Product> getProducts() {
