@@ -26,6 +26,7 @@ public class UserRestController {
 
     }
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping(value = "/")
     public List<UserDTO> getAllUsers() {
         return ObjectMapperUtils.mapAll(userService.findAllUser(), UserDTO.class);

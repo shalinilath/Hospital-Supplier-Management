@@ -26,12 +26,19 @@ public class VendorDTO {
     private String contactNumber;
     @Field("contact_title")
     private String contactTitle;
+    @Field("contact_email")
     private String email;
+    @Field("contact_address")
     private String address;
     @Field("service_type")
     private String serviceType;
-    private List<Product> products;
-
+//    private List<Product> products;
+    @Field("product_id")
+    private String productId;
+    @Field("product_name")
+    private String productName;
+    @Field("unit_price_dollar")
+    private String unitPrice;
     public VendorDTO() {}
 
 
@@ -123,11 +130,4 @@ public class VendorDTO {
         this.serviceType = serviceType;
     }
 
-    public List<Product> getProducts() {
-        return products;
-    }
-
-    public void setProducts(List<Product> products) {
-        this.products = products;
-    }
 }

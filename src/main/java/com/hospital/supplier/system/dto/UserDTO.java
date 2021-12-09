@@ -23,6 +23,16 @@ public class UserDTO {
     @Field("phone_number")
     private String phoneNumber;
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    @Field("email")
+    private String email;
+
     public UserDTO() {}
 
     public String getPassword() {

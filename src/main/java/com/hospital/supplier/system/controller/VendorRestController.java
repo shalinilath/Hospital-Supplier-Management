@@ -21,6 +21,7 @@ public class VendorRestController {
     @Autowired
     private  VendorService vendorService;
 
+    @CrossOrigin(origins = "http://localhost:3000")
     @GetMapping(value = "/")
     public List<VendorDTO> getAllVendors() {
         return ObjectMapperUtils.mapAll(vendorService.findAll(), VendorDTO.class);

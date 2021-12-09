@@ -1,6 +1,7 @@
 package com.hospital.supplier.system.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.SimpleReactiveMongoDatabaseFactory;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.Field;
 
@@ -26,12 +27,16 @@ public class User {
     private String designation;
     @Field("phone_number")
     private String phoneNumber;
+    @Field("email")
+    private String email;
 
     public User() {
 
     }
 
-    public User(String id, String userId, String userName, String firstName, String lastName, String password, String gender, String address, String designation, String phoneNumber) {
+    public User(String id, String userId, String userName, String firstName, String lastName,
+                String password, String gender, String address,
+                String designation, String phoneNumber, String email) {
         this.id = id;
         this.userId = userId;
         this.userName = userName;
@@ -42,6 +47,7 @@ public class User {
         this.address = address;
         this.designation = designation;
         this.phoneNumber = phoneNumber;
+        this.email = email;
     }
 
 
